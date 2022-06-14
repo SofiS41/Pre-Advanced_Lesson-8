@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Advenced Lesson 8</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .page-title{
+            padding: 10px 0;
+            margin-bottom: 30px;
+            background-color: aliceblue;
+            border-top: 1px solid #cdc4e5;
+            border-bottom: 1px solid #cdc4e5;
+            font-size: 22px;
+            line-height: 1em;
+            color: #4f3aa7;
+            align-items: center;
+        }
+        .bad-words__section{
+            max-width: 550px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: aliceblue;
+        }
+        .bad-words__list{
+            
+        }
+    </style>
+</head>
+<body>
+    <main class="bad-words">
+        <h1 class="page-title">Список заборонених слів:</h1>
+        <section class="bad-words__section">
+            <div class="bad-words__list">
+                <span class="bad-words__list_title">Заборонені слова:</span>
+                <span class="bad-words__list_list">Java, C++</span>
+            </div>
+            <form name="bad-words__form" class="bad-words__form">
+                <div class="bad-words__form_row">
+                    <input type="text" name="word" placeholder="Введіть заборонене слово">
+                    <button name="add" class="small-btn">Додати</button>
+                    <button name="reset" class="small-btn">Очистити всі</button>
+                </div>
+                <textarea name="text" class="bad-words__form_row" rows="5" placeholder="Введіть текст для перевірки"></textarea>
+                <button name="check" class="bad-words__form_row big-btn">Перевірити</button>
+            </form>
+        </section>
+    </main>
+    
+    <script src="./main.js"></script>
+</body>
+</html>
