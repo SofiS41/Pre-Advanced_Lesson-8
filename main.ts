@@ -7,14 +7,14 @@ console.log('-----TASK 1-----\n', address);
 
 
 // ------- TASK 2 -------
-let num: number = Number(prompt('Введіть число'));
-let message: string = num%2 == 0 ? "Число парне" : num%2 > 0 ? "Число непарне" : "Число 0";
-console.log('\n-----TASK 2-----\n', message);
+// let num: number = Number(prompt('Введіть число'));
+// let message: string = num%2 == 0 ? "Число парне" : num%2 > 0 ? "Число непарне" : "Число 0";
+// console.log('\n-----TASK 2-----\n', message);
 
 
 // ------- TASK 3 ------
 function maxNum(...arg: Array<number>): number{
-     return Math.max(...arg);
+    return Math.max(...arg);
 }
 console.log('\n-----TASK 3-----\n', maxNum(1, 8, 14, 3, 0, -3, 22, 5));
 
@@ -33,3 +33,6 @@ console.log('4 - ввели число - ', getSqrt(25));
 
 
 // ------- TASK 5 -------
+const form: HTMLFormElement = document.forms['badWords__form'];
+
+console.log('\n-----TASK 5-----\n', form);
