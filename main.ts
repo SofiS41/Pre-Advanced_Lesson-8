@@ -7,9 +7,9 @@ console.log('-----TASK 1-----\n', address);
 
 
 // ------- TASK 2 -------
-// let num: number = Number(prompt('Введіть число'));
-// let message: string = num%2 == 0 ? "Число парне" : num%2 > 0 ? "Число непарне" : "Число 0";
-// console.log('\n-----TASK 2-----\n', message);
+let num: number = Number(prompt('Введіть число'));
+let message: string = num%2 == 0 ? "Число парне" : num%2 > 0 ? "Число непарне" : "Число 0";
+console.log('\n-----TASK 2-----\n', message);
 
 
 // ------- TASK 3 ------
@@ -33,6 +33,35 @@ console.log('4 - ввели число - ', getSqrt(25));
 
 
 // ------- TASK 5 -------
-const form: HTMLFormElement = document.forms['badWords__form'];
+const form: HTMLFormElement = document.forms['badWords__form'],
+    formCheck: HTMLFormElement = document.forms['badWords__form-check'],
+    wordsList: HTMLSpanElement = document.querySelector('.bad-words__list_list');
 
-console.log('\n-----TASK 5-----\n', form);
+form.add.addEventListener('click', (e)=>{
+    e.preventDefault();
+    let wordMas: string[] = wordsList.textContent.split(', ');
+    let newWord: string = form.word.value;
+    if(!wordMas.includes(newWord)){
+        wordsList.textContent += ', '+newWord; 
+    }
+    else {
+        form.word.value = '';
+        form.word.placeholder = 'Таке слово вже є в списку';
+    }
+})
+form.resett.addEventListener('click', (e)=>{
+    e.preventDefault();
+    wordsList.textContent = '';
+})
+formCheck.check.addEventListener('click', (e)=>{
+    e.preventDefault();
+    let wordMas: string[] = wordsList.textContent.split(', ');
+    let text: string = formCheck.text.value;
+    console.log(wordMas);
+    wordMas.forEach(el=>{
+        let substitute = '*';
+        text = text.replace(el, substitute.repeat(el.length));
+    })
+    formCheck.text.value = text;
+})
+console.log('\n-----TASK 5-----\n', 'Watch result in textarea');
