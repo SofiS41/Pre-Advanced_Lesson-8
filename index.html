@@ -74,7 +74,7 @@
         button[name="add"]{
             background-color: rgb(255, 178, 35);
         }
-        button[name="reset"]{
+        button[name="resett"]{
             background-color: rgb(221, 12, 23);
         }
         .big-btn{
@@ -98,11 +98,13 @@
             </div>
             <form name="badWords__form" class="bad-words__form">
                 <div class="bad-words__form_row">
-                    <input type="text" name="word" placeholder="Введіть заборонене слово">
+                    <input type="text" name="word" placeholder="Введіть заборонене слово" required>
                     <button name="add" class="small-btn">Додати</button>
-                    <button name="reset" class="small-btn">Очистити всі</button>
+                    <button name="resett" class="small-btn">Очистити всі</button>
                 </div>
-                <textarea name="text" rows="5" placeholder="Введіть текст для перевірки"></textarea>
+            </form>
+            <form name="badWords__form-check" class="bad-words__form">
+                <textarea name="text" rows="5" placeholder="Введіть текст для перевірки" required></textarea>
                 <button name="check" class="big-btn">Перевірити</button>
             </form>
         </section>
