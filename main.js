@@ -30,7 +30,7 @@ console.log('3 - нічого не ввели - ', getSqrt());
 console.log('4 - ввели число - ', getSqrt(25));
 // ------- TASK 5 -------
 const form = document.forms['badWords__form'], formCheck = document.forms['badWords__form-check'], wordsList = document.querySelector('.bad-words__list_list');
-form.add.addEventListener('click', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
     let wordMas = wordsList.textContent.split(', ');
     let newWord = form.word.value;
@@ -46,7 +46,7 @@ form.resett.addEventListener('click', (e) => {
     e.preventDefault();
     wordsList.textContent = '';
 });
-formCheck.check.addEventListener('click', (e) => {
+formCheck.addEventListener('submit', (e) => {
     e.preventDefault();
     let wordMas = wordsList.textContent.split(', ');
     let text = formCheck.text.value;
