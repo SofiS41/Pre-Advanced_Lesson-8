@@ -37,7 +37,7 @@ const form: HTMLFormElement = document.forms['badWords__form'],
     formCheck: HTMLFormElement = document.forms['badWords__form-check'],
     wordsList: HTMLSpanElement = document.querySelector('.bad-words__list_list');
 
-form.add.addEventListener('click', (e)=>{
+form.addEventListener('submit', (e)=>{
     e.preventDefault();
     let wordMas: string[] = wordsList.textContent.split(', ');
     let newWord: string = form.word.value;
@@ -53,7 +53,7 @@ form.resett.addEventListener('click', (e)=>{
     e.preventDefault();
     wordsList.textContent = '';
 })
-formCheck.check.addEventListener('click', (e)=>{
+formCheck.addEventListener('submit', (e)=>{
     e.preventDefault();
     let wordMas: string[] = wordsList.textContent.split(', ');
     let text: string = formCheck.text.value;
